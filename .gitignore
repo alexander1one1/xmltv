@@ -1,0 +1,7 @@
+.idea
+temp
+venv
+__pycache__
+out.html
+xmltv.db
+all.m3u

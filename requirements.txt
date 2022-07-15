@@ -1,0 +1,4 @@
+xmltodict
+prettytable
+colorama
+wget
