@@ -282,6 +282,8 @@ class XMLTV():
         :return:
         Bool, True if found, False if not
         '''
+        if name == '':
+            return False
         for line in lst:
             if len(line) > 0:
                 if name.lower() in line.lower():

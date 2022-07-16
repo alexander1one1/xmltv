@@ -186,6 +186,9 @@ class FileHelper():
         list from list txt
         '''
         with open(self.lists_files[listname], 'r') as f:
-            return f.read().split('\n')
+            this_list = f.read().split('\n')
+            while ('' in this_list):
+                this_list.remove('')
+            return this_list
 
 
