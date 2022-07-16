@@ -6,35 +6,35 @@ import settings as st
 from class_xmltv import XMLTV
 # parse arguments
 parser = argparse.ArgumentParser(description='xmltv time-tool')
-parser.add_argument('--xmltv_link_arch',
+parser.add_argument('--xmltv_link_arch', '-a',
         type=str,
         default=st.list_archives_tvprogram_link[0],
         help='link of archive with xmltv'
         )
-parser.add_argument('--force_download',
+parser.add_argument('--force_download', '-f',
         type=int,
         default = 0,
         help='force download archive even exist. 0 - disabled, 1 - enabled'
         )
-parser.add_argument('--timezone',
+parser.add_argument('--timezone', '-t',
         type=int,
         default = 3,
         help='timezone from GMT (wo +)',
         )
-parser.add_argument('--target_minutes_ending',
+parser.add_argument('--target_minutes_ending', '-e',
         type=int,
         default = 5,
         help='minutes to end show'
         )
-parser.add_argument('--target_minutes_begining',
+parser.add_argument('--target_minutes_begining', '-b',
         type=int,
         default = 10,
         help='minutes to begin show'
         )
-parser.add_argument('--use_m3u',
+parser.add_argument('--use_m3u', '-p',
         type=int,
         default=0,
-        help='Use m3u file. 0 - disabled, 1 - enabled'
+        help='Use m3u playlist file. 0 - disabled, 1 - enabled'
         )
 args = parser.parse_args()
 
