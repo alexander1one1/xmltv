@@ -22,7 +22,8 @@ optional arguments:
                         minutes to begin show
   --use_m3u USE_M3U, -p USE_M3U
                         Use m3u playlist file. 0 - disabled, 1 - enabled
-
+  --html_out HTML_OUT, -ht HTML_OUT
+                        Use html out. 0 - disabled, 1 - enabled
 ```
 The `timezone` does not work now, the data is taken from the TV program.
 
@@ -43,6 +44,7 @@ In the same directory there are text files with stop words.
 
   --use_m3u _`0`_
 
+  --use_html _`0`_
 ### Examples of use:
 
 Data output with recreate database:
@@ -56,6 +58,10 @@ Data output with recreate database with channels in playlist (m3u file in direct
 Data output with changed time parameters (-2 <= time_now <= 5):
 
 `$ python3 main.py -e 2 -b 5`
+
+Data output via html (uses default browser):
+
+`$ python3 main.py -ht 1`
 
 Data output with default options:
 
