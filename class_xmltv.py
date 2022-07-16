@@ -123,11 +123,12 @@ class XMLTV():
         dirty_found_data = self.db.read_data_between('shows', (time_min, time_max))
         filtered_dirty_found_data = self.filter_shows(dirty_found_data)
 
-        found_data_console = self.pretty_filtered_list_for_console(filtered_dirty_found_data)
-
-        self.out.out_console(found_data_console)
-        #found_data_html = self.pretty_filtered_list_for_html(filtered_dirty_found_data)
-        #self.out.out_html(found_data_html, False)
+        if self.opts['html_out']:
+            found_data_html = self.pretty_filtered_list_for_html(filtered_dirty_found_data)
+            self.out.out_html(found_data_html, False)
+        else:
+            found_data_console = self.pretty_filtered_list_for_console(filtered_dirty_found_data)
+            self.out.out_console(found_data_console)
 
     def pretty_filtered_list_for_console(self, dirty_found_data:list):
         '''

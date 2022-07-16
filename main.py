@@ -36,6 +36,11 @@ parser.add_argument('--use_m3u', '-p',
         default=0,
         help='Use m3u playlist file. 0 - disabled, 1 - enabled'
         )
+parser.add_argument('--html_out', '-ht',
+        type=int,
+        default=0,
+        help='Use html out. 0 - disabled, 1 - enabled'
+        )
 args = parser.parse_args()
 
 # defs
@@ -45,7 +50,8 @@ opts = {
         'timezone': int(args.timezone),
         'target_minutes_ending': int(args.target_minutes_ending),
         'target_minutes_begining': int(args.target_minutes_begining),
-        'use_m3u': True if args.use_m3u == 1 else False
+        'use_m3u': True if args.use_m3u == 1 else False,
+        'html_out': True if args.html_out == 1 else False
 }
 
 
